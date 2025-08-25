@@ -3,6 +3,7 @@ import HeroSection from "@/components/hero-section"
 import MissionSection from "@/components/mission-section"
 import EventsSection from "@/components/events-section"
 import AutoScrollProvider from "@/components/auto-scroll-provider"
+import Footer from "@/components/footer"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
             <EventsSection />
           </div>
         </div>
+        <Footer />
       </main>
     </AutoScrollProvider>
   )
