@@ -126,3 +126,28 @@
 .text-lead-brown {
   color: #3c200f;
 }
+
+/* Adding universal button hover effects */
+button,
+.btn,
+[role="button"],
+input[type="submit"],
+input[type="button"] {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+button:hover,
+.btn:hover,
+[role="button"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  @apply scale-105;
+  background-color: #3c200f !important;
+  color: white !important;
+}
+
+/* Special handling for buttons that should maintain their text color */
+button:hover .text-white,
+.btn:hover .text-white {
+  color: white !important;
+}
