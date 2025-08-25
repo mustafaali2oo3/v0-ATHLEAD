@@ -53,10 +53,9 @@ export default function UploadForm() {
         data: { publicUrl },
       } = supabase.storage.from("posts").getPublicUrl(fileName)
 
-      // Create post record
       const { error: postError } = await supabase.from("posts").insert({
         user_id: user.id,
-        content: caption,
+        caption: caption,
         media_url: publicUrl,
         media_type: file.type.startsWith("video/") ? "video" : "image",
       })
